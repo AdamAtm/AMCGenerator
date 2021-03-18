@@ -1,0 +1,40 @@
+@startuml qcmAmcV1
+    class Matiere {
+        id:int 
+        description
+    }
+
+    class Theme {
+        id:int
+        description
+    }
+    
+    class Qcm {
+        nom:string
+        head:string
+    }
+
+    class Question {
+        lignes:int
+        columns:int         
+        question:string
+    }
+
+    class Proposition {
+        bonneMauvaise:string 
+        bareme:string  
+        reponse:string         
+    }   
+
+    enum TypeQuestion { 
+        Simple
+        Multiple
+        Ouverte
+        } 
+
+    Question-r-"1"TypeQuestion
+    Matiere"1"-d-"*"Qcm
+    Theme"1"-l-"*"Qcm
+    Qcm"1"-d-"*"Question
+    Question"1"--"0..*"Proposition
+@enduml
