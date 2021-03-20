@@ -5,13 +5,13 @@ USE amcgen;
 /*CREATION DES TABLE*/
 CREATE TABLE matiere(
     id INT NOT NULL AUTO_INCREMENT,
-    description VARCHAR(100),
+    nom VARCHAR(50),
     PRIMARY KEY(id)
 )ENGINE=INNODB;
 
 CREATE TABLE theme(
     id INT NOT NULL AUTO_INCREMENT,
-    description VARCHAR(100),
+    titre VARCHAR(50),
     PRIMARY KEY(id)
 )ENGINE=INNODB;
 

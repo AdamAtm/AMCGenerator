@@ -24,6 +24,24 @@
                     <label for="qcmHeader">En-tête</label>
                     <textarea type="text" name="qcmHeader" class="form-control"></textarea>
                 </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="idMatiere">Matière</label>
+                        <select name="idMatiere">
+                            <?php foreach($matiereList as $matiere) : ?>
+                                <option value="<?= $matiere->id; ?>"><?= $matiere->nom; ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="idTheme">Thème</label>
+                        <select name="idTheme">
+                            <?php foreach($themeList as $theme) : ?>
+                                <option value="<?= $theme->id; ?>"><?= $theme->titre; ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                </div>
                 <input type="submit" name="bt_createQcm" value="Valider" class="btn btn-success" />
             </form>
         </div>

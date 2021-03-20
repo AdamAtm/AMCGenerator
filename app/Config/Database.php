@@ -34,7 +34,7 @@ class Database extends Config
 		'DSN'      => '',
 		'hostname' => 'localhost',
 		'username' => 'root',
-		'password' => 'siojjr',
+		'password' => '',
 		'database' => 'amcgen',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',

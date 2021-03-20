@@ -1,26 +1,29 @@
 @startuml qcmAmcV1
     class Matiere {
         id:int 
-        description
+        nom
     }
 
     class Theme {
         id:int
-        description
+        titre:string
     }
     
     class Qcm {
+        id:int
         nom:string
         head:string
     }
 
     class Question {
+        id:int
         lignes:int
         columns:int         
         question:string
     }
 
     class Proposition {
+        id:int
         bonneMauvaise:string 
         bareme:string  
         reponse:string         
